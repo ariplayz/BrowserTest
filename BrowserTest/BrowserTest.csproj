@@ -8,6 +8,8 @@
   
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
+    <AvaloniaXaml Remove="Styles\AppDefaultStyles.axaml" />
+    <AvaloniaResource Include="Styles\AppDefaultStyles.axaml" />
   </ItemGroup>
 
   <ItemGroup>
