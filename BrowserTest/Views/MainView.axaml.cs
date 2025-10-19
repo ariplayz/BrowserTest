@@ -18,6 +18,20 @@ public partial class MainView : UserControl
     {
         // First initialize the component
         InitializeComponent();
+        // Initialize display once at startup
+        calculate();
+    }
+
+    // Event handler used by XAML: ValueChanged="OnValueChanged"
+    private void OnValueChanged(object? sender, RoutedEventArgs e)
+    {
+        calculate();
+    }
+
+    // Overload to match NumericUpDown specific event args, if used by the control
+    private void OnValueChanged(object? sender, Avalonia.Controls.NumericUpDownValueChangedEventArgs e)
+    {
+        calculate();
     }
 
     public void calculate()
